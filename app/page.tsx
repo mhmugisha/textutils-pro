@@ -23,14 +23,9 @@ const aiTools = [
   { name: "Paraphrasing Tool", slug: "paraphrasing-tool", icon: Wand2, description: "Rewrite your text in Standard, Formal or Creative tone." },
   { name: "Grammar Checker", slug: "grammar-checker", icon: CheckSquare, description: "Fix grammar errors and get a list of all corrections made." },
   { name: "Article Summarizer", slug: "article-summarizer", icon: Scissors, description: "Summarize long articles into short, medium or detailed form." },
-  { name: "Plagiarism Checker", slug: "plagiarism-checker", icon: Shield, description: "Check text originality and flag suspicious phrases." },
+  { name: "Originality Checker", slug: "plagiarism-checker", icon: Shield, description: "Analyse your text for original expression and natural writing patterns." },
   { name: "Text Expander", slug: "text-expander", icon: Expand, description: "Expand short text into a fuller, enriched version." },
 ];
-
-const allTools = [...freeTools, ...aiTools];
-const heroDisplayCount = 8;
-const heroTools = allTools.slice(0, heroDisplayCount);
-const remainingCount = allTools.length - heroDisplayCount;
 
 function ToolCard({ name, slug, icon: Icon, description, ai = false }: {
   name: string;
@@ -41,8 +36,8 @@ function ToolCard({ name, slug, icon: Icon, description, ai = false }: {
 }) {
   return (
     <Link href={`/${slug}`}
-      className={`group relative bg-white rounded-2xl border p-5 hover:shadow-xl transition-all duration-200 hover:-translate-y-1 ${
-        ai ? "border-purple-100 hover:border-purple-300" : "border-gray-100 hover:border-blue-300"
+      className={`group relative bg-white rounded-2xl border-2 p-5 hover:shadow-xl transition-all duration-200 hover:-translate-y-1 ${
+        ai ? "border-purple-100 hover:border-purple-400" : "border-gray-100 hover:border-blue-400"
       }`}>
       <div className="flex items-start justify-between mb-4">
         <div className={`w-10 h-10 rounded-xl flex items-center justify-center ${
@@ -67,7 +62,7 @@ function ToolCard({ name, slug, icon: Icon, description, ai = false }: {
 
 export default function Home() {
   return (
-    <div className="py-6">
+    <div className="py-2">
       {/* Hero */}
       <div className="relative mb-10 p-10 rounded-3xl overflow-hidden w-full"
         style={{ background: "linear-gradient(135deg, #1e3a5f 0%, #2563eb 60%, #7c3aed 100%)" }}>
@@ -83,17 +78,15 @@ export default function Home() {
             Fast, free, no login required. Powerful text utilities for writers, students, developers and marketers.
           </p>
           <div className="flex flex-wrap gap-2">
-            {heroTools.map((tool) => (
+            {freeTools.map((tool) => (
               <Link key={tool.slug} href={`/${tool.slug}`}
                 className="bg-white/15 text-white text-xs px-3 py-1.5 rounded-full border border-white/20 hover:bg-white/25 transition-colors">
                 {tool.name}
               </Link>
             ))}
-            {remainingCount > 0 && (
-              <span className="bg-white/15 text-white text-xs px-3 py-1.5 rounded-full border border-white/20">
-                +{remainingCount} more
-              </span>
-            )}
+            <span className="bg-white/15 text-white text-xs px-3 py-1.5 rounded-full border border-white/20">
+              +{aiTools.length} more
+            </span>
           </div>
         </div>
         <div className="absolute top-0 right-0 w-80 h-80 bg-white/5 rounded-full -translate-y-40 translate-x-40" />

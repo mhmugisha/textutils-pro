@@ -25,7 +25,7 @@ const tools = [
     { name: "Paraphrasing Tool", slug: "paraphrasing-tool", icon: Wand2 },
     { name: "Grammar Checker", slug: "grammar-checker", icon: CheckSquare },
     { name: "Article Summarizer", slug: "article-summarizer", icon: Scissors },
-    { name: "Plagiarism Checker", slug: "plagiarism-checker", icon: Shield },
+    { name: "Originality Checker", slug: "plagiarism-checker", icon: Shield },
     { name: "Text Expander", slug: "text-expander", icon: Expand },
   ]},
 ];
