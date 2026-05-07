@@ -22,7 +22,7 @@ export default function RootLayout({
         <Navbar />
         <div className="flex min-h-screen pt-20">
           <Sidebar />
-          <main className="flex-1 ml-64 min-w-0 px-8 py-6">
+          <main className="flex-1 ml-64 min-w-0 px-6 pt-8 pb-6">
             {children}
           </main>
         </div>
