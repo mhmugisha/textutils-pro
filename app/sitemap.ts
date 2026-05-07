@@ -9,7 +9,7 @@ const tools = [
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://textutilspro.com";
+  const baseUrl = "https://texttoolsmax.com";
   return [
     { url: baseUrl, lastModified: new Date(), changeFrequency: "weekly", priority: 1 },
     ...tools.map((tool) => ({
