@@ -35,34 +35,83 @@ function ToolCard({ name, slug, icon: Icon, description, ai = false }: {
   ai?: boolean;
 }) {
   return (
-    <Link href={`/${slug}`} className="bg-white rounded-xl border border-gray-200 p-5 hover:shadow-md hover:border-blue-200 transition-all group">
-      <div className="flex items-center gap-3 mb-2">
-        <div className={`p-2 rounded-lg ${ai ? "bg-purple-50" : "bg-blue-50"}`}>
+    <Link href={`/${slug}`}
+      className={`group relative bg-white rounded-2xl border p-5 hover:shadow-lg transition-all duration-200 hover:-translate-y-0.5 ${
+        ai ? "border-purple-100 hover:border-purple-200" : "border-gray-100 hover:border-blue-200"
+      }`}>
+      <div className="flex items-start justify-between mb-3">
+        <div className={`p-2.5 rounded-xl ${ai ? "bg-purple-50" : "bg-blue-50"}`}>
           <Icon size={18} className={ai ? "text-purple-600" : "text-blue-600"} />
         </div>
-        <h3 className="font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">{name}</h3>
-        {ai && <span className="ml-auto text-xs bg-purple-100 text-purple-600 px-2 py-0.5 rounded-full">AI</span>}
+        {ai && (
+          <span className="text-xs bg-purple-100 text-purple-600 px-2 py-0.5 rounded-full font-medium">AI</span>
+        )}
       </div>
-      <p className="text-sm text-gray-500">{description}</p>
+      <h3 className={`font-semibold text-gray-800 mb-1.5 group-hover:${ai ? "text-purple-600" : "text-blue-600"} transition-colors`}>
+        {name}
+      </h3>
+      <p className="text-sm text-gray-500 leading-relaxed">{description}</p>
+      <div className={`absolute bottom-0 left-0 right-0 h-0.5 rounded-b-2xl opacity-0 group-hover:opacity-100 transition-opacity ${
+        ai ? "bg-purple-400" : "bg-blue-400"
+      }`} />
     </Link>
   );
 }
 
 export default function Home() {
   return (
-    <div className="py-6">
+    <div className="py-6 max-w-6xl">
       {/* Hero */}
-      <div className="mb-10">
-        <h1 className="text-3xl font-bold text-gray-900 mb-3">Free Online Text Tools</h1>
-        <p className="text-gray-500 text-lg max-w-2xl">
-          Fast, free, no login required. 15 powerful text utilities for writers, students, developers and marketers.
-        </p>
+      <div className="relative mb-10 p-8 rounded-3xl overflow-hidden"
+        style={{ background: "linear-gradient(135deg, #1e3a5f 0%, #2563eb 60%, #7c3aed 100%)" }}>
+        <div className="relative z-10">
+          <div className="inline-flex items-center gap-2 bg-white/20 text-white text-xs px-3 py-1.5 rounded-full mb-4 border border-white/30">
+            <span className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse" />
+            15 Tools Available — Free Forever
+          </div>
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-3">
+            Free Online Text Tools
+          </h1>
+          <p className="text-blue-100 text-lg max-w-2xl">
+            Fast, free, no login required. Powerful text utilities for writers, students, developers and marketers.
+          </p>
+          <div className="flex flex-wrap gap-3 mt-6">
+            {["Word Counter", "Grammar Checker", "Paraphrasing Tool", "Readability Checker"].map((tool) => (
+              <span key={tool} className="bg-white/15 text-white text-xs px-3 py-1.5 rounded-full border border-white/20">
+                {tool}
+              </span>
+            ))}
+            <span className="bg-white/15 text-white text-xs px-3 py-1.5 rounded-full border border-white/20">
+              +11 more
+            </span>
+          </div>
+        </div>
+        <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-32 translate-x-32" />
+        <div className="absolute bottom-0 right-16 w-32 h-32 bg-purple-400/20 rounded-full translate-y-16" />
+      </div>
+
+      {/* Stats */}
+      <div className="grid grid-cols-3 gap-4 mb-10">
+        {[
+          { value: "15", label: "Free Tools" },
+          { value: "5", label: "AI-Powered" },
+          { value: "0", label: "Login Required" },
+        ].map((stat) => (
+          <div key={stat.label} className="bg-white rounded-2xl border border-gray-100 p-4 text-center shadow-sm">
+            <div className="text-2xl font-bold text-blue-600">{stat.value}</div>
+            <div className="text-sm text-gray-500 mt-0.5">{stat.label}</div>
+          </div>
+        ))}
       </div>
 
       {/* Free Tools */}
       <div className="mb-10">
-        <h2 className="text-lg font-semibold text-gray-700 mb-4">Free Tools</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="flex items-center gap-3 mb-5">
+          <div className="h-1 w-5 bg-blue-500 rounded-full" />
+          <h2 className="text-lg font-bold text-gray-800">Free Tools</h2>
+          <span className="text-xs bg-blue-50 text-blue-600 px-2 py-0.5 rounded-full">10 tools</span>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
           {freeTools.map((tool) => (
             <ToolCard key={tool.slug} {...tool} />
           ))}
@@ -71,8 +120,12 @@ export default function Home() {
 
       {/* AI Tools */}
       <div>
-        <h2 className="text-lg font-semibold text-gray-700 mb-4">AI-Powered Tools</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="flex items-center gap-3 mb-5">
+          <div className="h-1 w-5 bg-purple-500 rounded-full" />
+          <h2 className="text-lg font-bold text-gray-800">AI-Powered Tools</h2>
+          <span className="text-xs bg-purple-50 text-purple-600 px-2 py-0.5 rounded-full">5 tools</span>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
           {aiTools.map((tool) => (
             <ToolCard key={tool.slug} {...tool} ai />
           ))}
