@@ -36,14 +36,14 @@ function ToolCard({ name, slug, icon: Icon, description, ai = false }: {
 }) {
   return (
     <Link href={`/${slug}`}
-      className={`group relative bg-white rounded-xl border-2 p-4 hover:shadow-lg transition-all duration-200 hover:-translate-y-0.5 ${
+      className={`group relative bg-white rounded-xl border-2 p-5 hover:shadow-lg transition-all duration-200 hover:-translate-y-0.5 ${
         ai ? "border-purple-100 hover:border-purple-400" : "border-gray-100 hover:border-blue-400"
       }`}>
-      <div className="flex items-center gap-3 mb-2">
-        <div className={`w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 ${
+      <div className="flex items-center gap-3 mb-3">
+        <div className={`w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0 ${
           ai ? "bg-gradient-to-br from-purple-500 to-purple-600" : "bg-gradient-to-br from-blue-500 to-blue-600"
         }`}>
-          <Icon size={15} className="text-white" />
+          <Icon size={16} className="text-white" />
         </div>
         <h3 className="font-semibold text-gray-800 text-sm group-hover:text-blue-600 transition-colors leading-tight">
           {name}
