@@ -1,6 +1,6 @@
 export const metadata = {
   title: "Contact Us | TextToolsMax",
-  description: "Get in touch with the TextToolsMax team. We would love to hear from you.",
+  description: "Get in touch with the TextToolsMax team.",
 };
 
 export default function Contact() {
@@ -13,14 +13,7 @@ export default function Contact() {
           <h2 className="text-lg font-semibold text-gray-800 mb-4">Get In Touch</h2>
           <p className="mb-4">Whether you have a question, a suggestion, found a bug, or want to request a new tool, we are always happy to hear from our users.</p>
           <p className="mb-6">Send us an email and we will get back to you as soon as possible.</p>
-          
-            href="mailto:mhmugisha@gmail.com"
-            className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-xl font-medium hover:bg-blue-700 transition-colors"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <rect width="20" height="16" x="2" y="4" rx="2"/>
-              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
-            </svg>
+          <a href="mailto:mhmugisha@gmail.com" className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-xl font-medium hover:bg-blue-700 transition-colors">
             mhmugisha@gmail.com
           </a>
         </div>
