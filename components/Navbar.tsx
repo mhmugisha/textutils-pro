@@ -10,7 +10,7 @@ export default function Navbar() {
             <span className="text-blue-600 font-black text-base">T</span>
           </div>
           <span className="text-2xl font-bold text-white tracking-tight">
-            TextUtils <span className="text-blue-200">Pro</span>
+            TextTools <span className="text-blue-200">Max</span>
           </span>
         </Link>
         <div className="hidden md:flex items-center gap-1 ml-6">
