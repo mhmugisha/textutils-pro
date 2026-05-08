@@ -36,24 +36,24 @@ function ToolCard({ name, slug, icon: Icon, description, ai = false }: {
 }) {
   return (
     <Link href={`/${slug}`}
-      className={`group relative bg-white rounded-2xl border-2 p-5 hover:shadow-xl transition-all duration-200 hover:-translate-y-1 ${
+      className={`group relative bg-white rounded-xl border-2 p-4 hover:shadow-lg transition-all duration-200 hover:-translate-y-0.5 ${
         ai ? "border-purple-100 hover:border-purple-400" : "border-gray-100 hover:border-blue-400"
       }`}>
-      <div className="flex items-start justify-between mb-4">
-        <div className={`w-10 h-10 rounded-xl flex items-center justify-center ${
+      <div className="flex items-center gap-3 mb-2">
+        <div className={`w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 ${
           ai ? "bg-gradient-to-br from-purple-500 to-purple-600" : "bg-gradient-to-br from-blue-500 to-blue-600"
         }`}>
-          <Icon size={18} className="text-white" />
+          <Icon size={15} className="text-white" />
         </div>
+        <h3 className="font-semibold text-gray-800 text-sm group-hover:text-blue-600 transition-colors leading-tight">
+          {name}
+        </h3>
         {ai && (
-          <span className="text-xs bg-purple-100 text-purple-600 px-2 py-0.5 rounded-full font-medium">AI</span>
+          <span className="ml-auto text-xs bg-purple-100 text-purple-600 px-1.5 py-0.5 rounded-full font-medium flex-shrink-0">AI</span>
         )}
       </div>
-      <h3 className="font-semibold text-gray-800 mb-1.5 group-hover:text-blue-600 transition-colors">
-        {name}
-      </h3>
-      <p className="text-sm text-gray-500 leading-relaxed">{description}</p>
-      <div className={`absolute bottom-0 left-0 right-0 h-1 rounded-b-2xl opacity-0 group-hover:opacity-100 transition-opacity ${
+      <p className="text-xs text-gray-500 leading-relaxed">{description}</p>
+      <div className={`absolute bottom-0 left-0 right-0 h-0.5 rounded-b-xl opacity-0 group-hover:opacity-100 transition-opacity ${
         ai ? "bg-gradient-to-r from-purple-400 to-purple-600" : "bg-gradient-to-r from-blue-400 to-blue-600"
       }`} />
     </Link>
@@ -64,17 +64,17 @@ export default function Home() {
   return (
     <div className="py-2">
       {/* Hero */}
-      <div className="relative mb-10 p-10 rounded-3xl overflow-hidden w-full"
+      <div className="relative mb-6 p-8 rounded-3xl overflow-hidden w-full"
         style={{ background: "linear-gradient(135deg, #1e3a5f 0%, #2563eb 60%, #7c3aed 100%)" }}>
         <div className="relative z-10">
-          <div className="inline-flex items-center gap-2 bg-white/20 text-white text-xs px-3 py-1.5 rounded-full mb-5 border border-white/30">
+          <div className="inline-flex items-center gap-2 bg-white/20 text-white text-xs px-3 py-1.5 rounded-full mb-4 border border-white/30">
             <span className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse" />
             15 Tools Available — Free Forever
           </div>
-          <h1 className="text-4xl font-bold text-white mb-4 leading-tight">
+          <h1 className="text-3xl font-bold text-white mb-3 leading-tight">
             Free Online Text Tools
           </h1>
-          <p className="text-blue-100 text-lg mb-6 max-w-2xl">
+          <p className="text-blue-100 text-base mb-4 max-w-2xl">
             Fast, free, no login required. Powerful text utilities for writers, students, developers and marketers.
           </p>
           <div className="flex flex-wrap gap-2">
@@ -94,28 +94,14 @@ export default function Home() {
         <div className="absolute top-1/2 right-10 w-24 h-24 bg-blue-300/20 rounded-full" />
       </div>
 
-      {/* Stats */}
-      <div className="grid grid-cols-3 gap-4 mb-10">
-        {[
-          { value: "15", label: "Free Tools", color: "text-blue-600" },
-          { value: "5", label: "AI-Powered", color: "text-purple-600" },
-          { value: "0", label: "Login Required", color: "text-green-600" },
-        ].map((stat) => (
-          <div key={stat.label} className="bg-white rounded-2xl border border-gray-100 p-5 text-center shadow-sm hover:shadow-md transition-shadow">
-            <div className={`text-3xl font-bold ${stat.color}`}>{stat.value}</div>
-            <div className="text-sm text-gray-500 mt-1">{stat.label}</div>
-          </div>
-        ))}
-      </div>
-
       {/* Text Tools */}
-      <div className="mb-10">
-        <div className="flex items-center gap-3 mb-6">
-          <div className="h-6 w-1 bg-blue-500 rounded-full" />
-          <h2 className="text-xl font-bold text-gray-800">Text Tools</h2>
-          <span className="text-xs bg-blue-50 text-blue-600 px-2.5 py-1 rounded-full font-medium">10 tools</span>
+      <div className="mb-6">
+        <div className="flex items-center gap-3 mb-4">
+          <div className="h-5 w-1 bg-blue-500 rounded-full" />
+          <h2 className="text-base font-bold text-gray-800">Text Tools</h2>
+          <span className="text-xs bg-blue-50 text-blue-600 px-2 py-0.5 rounded-full font-medium">10 tools</span>
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3">
           {freeTools.map((tool) => (
             <ToolCard key={tool.slug} {...tool} />
           ))}
@@ -124,12 +110,12 @@ export default function Home() {
 
       {/* AI Tools */}
       <div>
-        <div className="flex items-center gap-3 mb-6">
-          <div className="h-6 w-1 bg-purple-500 rounded-full" />
-          <h2 className="text-xl font-bold text-gray-800">AI-Powered Tools</h2>
-          <span className="text-xs bg-purple-50 text-purple-600 px-2.5 py-1 rounded-full font-medium">5 tools</span>
+        <div className="flex items-center gap-3 mb-4">
+          <div className="h-5 w-1 bg-purple-500 rounded-full" />
+          <h2 className="text-base font-bold text-gray-800">AI-Powered Tools</h2>
+          <span className="text-xs bg-purple-50 text-purple-600 px-2 py-0.5 rounded-full font-medium">5 tools</span>
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3">
           {aiTools.map((tool) => (
             <ToolCard key={tool.slug} {...tool} ai />
           ))}
