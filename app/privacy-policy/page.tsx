@@ -90,7 +90,7 @@ export default function PrivacyPolicy() {
         <section>
           <h2 className="text-xl font-semibold text-gray-800 mb-3">11. Contact Us</h2>
           <p>If you have any questions about this Privacy Policy, please contact us at:</p>
-          <p className="mt-2 font-medium text-gray-800">privacy@texttoolsmax.com</p>
+          <p className="mt-2 font-medium text-gray-800">mhmugisha@gmail.com</p>
         </section>
 
       </div>
