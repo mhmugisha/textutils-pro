@@ -20,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
+      <body className={`${inter.className} bg-slate-50 text-gray-900`}>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-HN5CFR863G"
           strategy="afterInteractive"
@@ -33,8 +33,6 @@ export default function RootLayout({
             gtag('config', 'G-HN5CFR863G');
           `}
         </Script>
-      </head>
-      <body className={`${inter.className} bg-slate-50 text-gray-900`}>
         <Navbar />
         <div className="flex min-h-screen pt-20">
           <Sidebar />
