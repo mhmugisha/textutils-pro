@@ -11,6 +11,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "TextToolsMax — Free Online Text Tools",
   description: "Free online text tools including word counter, character counter, paraphrasing tool, grammar checker, and more. Fast, free, no login required.",
+  verification: {
+    google: "rD48nDF0KHxd9vHfk5rGlBYETnI384ZQLOae47VCPh8",
+  },
 };
 
 export default function RootLayout({
