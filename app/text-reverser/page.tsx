@@ -94,6 +94,29 @@ export default function TextReverser() {
           ))}
         </div>
       </div>
+
+      <div className="mt-10 space-y-6">
+        <div className="bg-white border border-gray-100 rounded-xl p-5">
+          <h2 className="font-semibold text-gray-800 mb-2">What is a Text Reverser?</h2>
+          <p className="text-sm text-gray-500 leading-relaxed">A text reverser is a tool that flips your text in different ways — by individual characters, by words, or by lines. It is used for creative writing effects, simple text encoding, programming tests, and fun social media content.</p>
+        </div>
+        <div className="bg-white border border-gray-100 rounded-xl p-5">
+          <h2 className="font-semibold text-gray-800 mb-2">How to Use the Text Reverser</h2>
+          <p className="text-sm text-gray-500 leading-relaxed">Paste your text into the left box, select your reversal mode (characters, words, or lines), and the reversed text appears instantly in the right box. Copy it to clipboard with one click.</p>
+        </div>
+        <div className="bg-white border border-gray-100 rounded-xl p-5">
+          <h2 className="font-semibold text-gray-800 mb-2">Three Reversal Modes Explained</h2>
+          <p className="text-sm text-gray-500 leading-relaxed">Character reversal flips every letter so "hello world" becomes "dlrow olleh". Word reversal keeps words intact but flips their order so "hello world" becomes "world hello". Line reversal keeps each line intact but reverses the order of lines — useful for flipping lists upside down.</p>
+        </div>
+        <div className="bg-white border border-gray-100 rounded-xl p-5">
+          <h2 className="font-semibold text-gray-800 mb-2">Who Uses Text Reversers?</h2>
+          <p className="text-sm text-gray-500 leading-relaxed">Programmers testing string manipulation functions. Puzzle and game creators. Social media users creating mirror text effects. Teachers creating word puzzles for students. Writers experimenting with creative text effects.</p>
+        </div>
+        <div className="bg-white border border-gray-100 rounded-xl p-5">
+          <h2 className="font-semibold text-gray-800 mb-2">Fun Facts About Reversed Text</h2>
+          <p className="text-sm text-gray-500 leading-relaxed">Some words read the same forwards and backwards — these are called palindromes. Examples include "racecar", "level", and "madam". Mirror writing was famously used by Leonardo da Vinci in his personal notebooks.</p>
+        </div>
+      </div>
     </div>
   );
 }

@@ -60,6 +60,29 @@ export default function SentenceCounter() {
           ))}
         </div>
       </div>
+
+      <div className="mt-10 space-y-6">
+        <div className="bg-white border border-gray-100 rounded-xl p-5">
+          <h2 className="font-semibold text-gray-800 mb-2">What is a Sentence Counter?</h2>
+          <p className="text-sm text-gray-500 leading-relaxed">A sentence counter is a tool that analyses your text and counts the total number of sentences, words, and paragraphs, while also calculating the average number of words per sentence — a key readability metric.</p>
+        </div>
+        <div className="bg-white border border-gray-100 rounded-xl p-5">
+          <h2 className="font-semibold text-gray-800 mb-2">How to Use the Sentence Counter</h2>
+          <p className="text-sm text-gray-500 leading-relaxed">Paste or type your text into the box above. The tool instantly counts your sentences by detecting periods, exclamation marks, and question marks, and calculates average sentence length in real time.</p>
+        </div>
+        <div className="bg-white border border-gray-100 rounded-xl p-5">
+          <h2 className="font-semibold text-gray-800 mb-2">Why Sentence Length Matters</h2>
+          <p className="text-sm text-gray-500 leading-relaxed">Short sentences (under 15 words) are easier to read and better for web content. Long sentences (over 25 words) can confuse readers and hurt comprehension. A mix of short and medium sentences creates the most engaging writing rhythm.</p>
+        </div>
+        <div className="bg-white border border-gray-100 rounded-xl p-5">
+          <h2 className="font-semibold text-gray-800 mb-2">Ideal Sentence Length by Content Type</h2>
+          <p className="text-sm text-gray-500 leading-relaxed">Web articles: 15-20 words average. Academic writing: 20-25 words average. Children's content: 8-12 words average. Marketing copy: 10-15 words average. Legal documents: 25-30 words average.</p>
+        </div>
+        <div className="bg-white border border-gray-100 rounded-xl p-5">
+          <h2 className="font-semibold text-gray-800 mb-2">Who Uses a Sentence Counter?</h2>
+          <p className="text-sm text-gray-500 leading-relaxed">Writers checking readability. Teachers grading student essays. Content marketers optimising for SEO. Editors reviewing manuscripts. Bloggers improving post structure.</p>
+        </div>
+      </div>
     </div>
   );
 }

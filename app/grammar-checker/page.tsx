@@ -54,13 +54,13 @@ export default function GrammarChecker() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
           <label className="block text-sm font-medium text-gray-600 mb-2">
-            Input Text <span className="text-gray-400">({text.length}/3000)</span>
+            Input Text <span className="text-gray-400">({text.length}/10000)</span>
           </label>
           <textarea
             className="w-full h-64 p-4 border border-gray-200 rounded-xl bg-white resize-none focus:outline-none focus:ring-2 focus:ring-purple-300 text-gray-800"
             placeholder="Paste your text here to check grammar..."
             value={text}
-            maxLength={3000}
+            maxLength={10000}
             onChange={(e) => setText(e.target.value)}
           />
         </div>
@@ -126,7 +126,7 @@ export default function GrammarChecker() {
             { q: "What errors does the grammar checker fix?", a: "Our AI grammar checker fixes spelling mistakes, punctuation errors, subject-verb agreement, tense inconsistencies, and sentence structure issues." },
             { q: "Does it show what was changed?", a: "Yes, every correction is listed below the result so you can see exactly what was fixed and why." },
             { q: "Is it suitable for academic writing?", a: "Yes, the grammar checker works well for essays, reports, emails, blog posts, and academic writing." },
-            { q: "What is the maximum text length?", a: "You can check up to 3000 characters at a time for best results." },
+            { q: "What is the maximum text length?", a: "You can check up to 10000 characters at a time for best results." },
             { q: "Is this tool free?", a: "Yes, completely free with no login or account required." },
           ].map((faq) => (
             <div key={faq.q} className="bg-white border border-gray-100 rounded-xl p-4">
@@ -134,6 +134,29 @@ export default function GrammarChecker() {
               <p className="text-sm text-gray-500">{faq.a}</p>
             </div>
           ))}
+        </div>
+      </div>
+
+      <div className="mt-10 space-y-6">
+        <div className="bg-white border border-gray-100 rounded-xl p-5">
+          <h2 className="font-semibold text-gray-800 mb-2">What is a Grammar Checker?</h2>
+          <p className="text-sm text-gray-500 leading-relaxed">A grammar checker is a tool that scans your text for grammatical errors, spelling mistakes, punctuation issues, and sentence structure problems, then provides corrections and explains what was changed.</p>
+        </div>
+        <div className="bg-white border border-gray-100 rounded-xl p-5">
+          <h2 className="font-semibold text-gray-800 mb-2">How to Use the Grammar Checker</h2>
+          <p className="text-sm text-gray-500 leading-relaxed">Paste your text into the left box and click Check Grammar. The AI analyses your writing, displays the corrected version on the right, and lists every change made below so you can learn from each correction.</p>
+        </div>
+        <div className="bg-white border border-gray-100 rounded-xl p-5">
+          <h2 className="font-semibold text-gray-800 mb-2">What Errors Does It Fix?</h2>
+          <p className="text-sm text-gray-500 leading-relaxed">Subject-verb agreement errors. Incorrect tense usage. Missing or misplaced punctuation. Spelling mistakes. Run-on sentences. Sentence fragments. Incorrect article usage (a vs an). Misused homophones (their, there, they're).</p>
+        </div>
+        <div className="bg-white border border-gray-100 rounded-xl p-5">
+          <h2 className="font-semibold text-gray-800 mb-2">Who Uses Grammar Checkers?</h2>
+          <p className="text-sm text-gray-500 leading-relaxed">Students proofreading essays and assignments. Professionals polishing emails and reports. Non-native English speakers improving writing confidence. Bloggers ensuring error-free content. Job seekers reviewing cover letters and CVs.</p>
+        </div>
+        <div className="bg-white border border-gray-100 rounded-xl p-5">
+          <h2 className="font-semibold text-gray-800 mb-2">Benefits Over Basic Spell Checkers</h2>
+          <p className="text-sm text-gray-500 leading-relaxed">Unlike basic spell checkers in word processors, our AI grammar checker understands context. It can detect correctly spelled words used incorrectly, identify grammatical structure issues, and provide a full list of every correction made with explanations.</p>
         </div>
       </div>
     </div>

@@ -87,6 +87,29 @@ export default function TextCaseConverter() {
           ))}
         </div>
       </div>
+
+      <div className="mt-10 space-y-6">
+        <div className="bg-white border border-gray-100 rounded-xl p-5">
+          <h2 className="font-semibold text-gray-800 mb-2">What is a Text Case Converter?</h2>
+          <p className="text-sm text-gray-500 leading-relaxed">A text case converter is a tool that transforms the capitalization of your text into different formats instantly. Instead of manually retyping or editing text letter by letter, you can convert entire documents in one click.</p>
+        </div>
+        <div className="bg-white border border-gray-100 rounded-xl p-5">
+          <h2 className="font-semibold text-gray-800 mb-2">How to Use the Text Case Converter</h2>
+          <p className="text-sm text-gray-500 leading-relaxed">Paste your text in the left box, then click any of the five conversion buttons: UPPER CASE, lower case, Title Case, Sentence case, or aLtErNaTiNg case. The converted text appears instantly in the right box ready to copy.</p>
+        </div>
+        <div className="bg-white border border-gray-100 rounded-xl p-5">
+          <h2 className="font-semibold text-gray-800 mb-2">When to Use Each Case</h2>
+          <p className="text-sm text-gray-500 leading-relaxed">UPPER CASE: headings, acronyms, emphasis. lower case: casual writing, code variables. Title Case: article titles, book titles, headings. Sentence case: normal prose, emails, blog posts. Alternating case: memes, sarcastic social media posts.</p>
+        </div>
+        <div className="bg-white border border-gray-100 rounded-xl p-5">
+          <h2 className="font-semibold text-gray-800 mb-2">Who Uses Text Case Converters?</h2>
+          <p className="text-sm text-gray-500 leading-relaxed">Writers fixing accidentally capitalized text. Developers formatting variable names. Social media managers creating visual emphasis. Students correcting copy-pasted text. Designers formatting headlines consistently.</p>
+        </div>
+        <div className="bg-white border border-gray-100 rounded-xl p-5">
+          <h2 className="font-semibold text-gray-800 mb-2">Benefits</h2>
+          <p className="text-sm text-gray-500 leading-relaxed">Converts entire documents in one click, supports five different case formats, shows both input and output simultaneously, and includes a copy to clipboard button for instant use.</p>
+        </div>
+      </div>
     </div>
   );
 }

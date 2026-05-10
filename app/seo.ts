@@ -52,8 +52,8 @@ export const seoData: Record<string, { title: string; description: string }> = {
     description: "Summarize long articles and text into short, medium or detailed summaries using AI. Free online summarizer.",
   },
   "plagiarism-checker": {
-    title: "Plagiarism Checker — Free AI Originality Checker | TextUtils Pro",
-    description: "Check your text for originality and get an AI-powered plagiarism analysis instantly. Free online plagiarism checker.",
+    title: "AI Content Checker — Free AI Writing Detector | TextToolsMax",
+    description: "Detect AI-generated content instantly. Check if text was written by ChatGPT, Claude, Gemini or other AI tools. Free online AI detector, no login required.",
   },
   "text-expander": {
     title: "Text Expander — Free AI Text Expansion Tool | TextUtils Pro",

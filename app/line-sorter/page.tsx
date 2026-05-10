@@ -101,6 +101,29 @@ export default function LineSorter() {
           ))}
         </div>
       </div>
+
+      <div className="mt-10 space-y-6">
+        <div className="bg-white border border-gray-100 rounded-xl p-5">
+          <h2 className="font-semibold text-gray-800 mb-2">What is a Line Sorter?</h2>
+          <p className="text-sm text-gray-500 leading-relaxed">A line sorter is a text tool that reorganises lines of text into a different order. It can sort lines alphabetically from A to Z or Z to A, arrange them by length, reverse their current order, or shuffle them randomly.</p>
+        </div>
+        <div className="bg-white border border-gray-100 rounded-xl p-5">
+          <h2 className="font-semibold text-gray-800 mb-2">How to Use the Line Sorter</h2>
+          <p className="text-sm text-gray-500 leading-relaxed">Paste your list into the left box, then click any sorting button: A to Z, Z to A, Reverse Order, By Length, or Randomize. The sorted result appears instantly in the right box ready to copy.</p>
+        </div>
+        <div className="bg-white border border-gray-100 rounded-xl p-5">
+          <h2 className="font-semibold text-gray-800 mb-2">Five Sorting Modes</h2>
+          <p className="text-sm text-gray-500 leading-relaxed">A to Z: alphabetical ascending order. Z to A: alphabetical descending order. Reverse Order: flips the current sequence of lines. By Length: shortest lines first. Randomize: shuffles lines in a random order — useful for creating random question sets or shuffling lists.</p>
+        </div>
+        <div className="bg-white border border-gray-100 rounded-xl p-5">
+          <h2 className="font-semibold text-gray-800 mb-2">Who Uses Line Sorters?</h2>
+          <p className="text-sm text-gray-500 leading-relaxed">Teachers randomising quiz questions. Developers sorting configuration entries. Writers organising bullet point lists. Data analysts sorting exported text data. SEO professionals organising keyword lists alphabetically.</p>
+        </div>
+        <div className="bg-white border border-gray-100 rounded-xl p-5">
+          <h2 className="font-semibold text-gray-800 mb-2">Benefits</h2>
+          <p className="text-sm text-gray-500 leading-relaxed">Sorts lists of any size instantly, supports five different sorting modes, preserves the exact text of each line, and includes a copy to clipboard button.</p>
+        </div>
+      </div>
     </div>
   );
 }

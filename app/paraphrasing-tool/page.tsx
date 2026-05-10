@@ -65,13 +65,13 @@ export default function ParaphrasingTool() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
           <label className="block text-sm font-medium text-gray-600 mb-2">
-            Input Text <span className="text-gray-400">({text.length}/3000)</span>
+            Input Text <span className="text-gray-400">({text.length}/10000)</span>
           </label>
           <textarea
             className="w-full h-64 p-4 border border-gray-200 rounded-xl bg-white resize-none focus:outline-none focus:ring-2 focus:ring-purple-300 text-gray-800"
             placeholder="Paste your text here to paraphrase..."
             value={text}
-            maxLength={3000}
+            maxLength={10000}
             onChange={(e) => setText(e.target.value)}
           />
         </div>
@@ -115,7 +115,7 @@ export default function ParaphrasingTool() {
             { q: "What is a paraphrasing tool?", a: "A paraphrasing tool rewrites your text while keeping the same meaning. It is useful for avoiding repetition, improving clarity, and adapting content for different audiences." },
             { q: "What is the difference between the tones?", a: "Standard tone rewrites naturally, Formal tone uses professional language suitable for business or academic writing, and Creative tone uses more expressive and varied language." },
             { q: "Is the paraphrased text plagiarism free?", a: "Our AI rewrites text in a unique way, but we always recommend reviewing the output and adding your own voice before publishing." },
-            { q: "What is the maximum text length?", a: "You can paraphrase up to 3000 characters at a time for best results." },
+            { q: "What is the maximum text length?", a: "You can paraphrase up to 10000 characters at a time for best results." },
             { q: "Is this tool free?", a: "Yes, completely free with no login or account required." },
           ].map((faq) => (
             <div key={faq.q} className="bg-white border border-gray-100 rounded-xl p-4">
@@ -123,6 +123,29 @@ export default function ParaphrasingTool() {
               <p className="text-sm text-gray-500">{faq.a}</p>
             </div>
           ))}
+        </div>
+      </div>
+
+      <div className="mt-10 space-y-6">
+        <div className="bg-white border border-gray-100 rounded-xl p-5">
+          <h2 className="font-semibold text-gray-800 mb-2">What is a Paraphrasing Tool?</h2>
+          <p className="text-sm text-gray-500 leading-relaxed">A paraphrasing tool rewrites your text while preserving the original meaning. It uses AI to restructure sentences, replace words with synonyms, and vary the writing style — producing fresh content that reads naturally.</p>
+        </div>
+        <div className="bg-white border border-gray-100 rounded-xl p-5">
+          <h2 className="font-semibold text-gray-800 mb-2">How to Use the Paraphrasing Tool</h2>
+          <p className="text-sm text-gray-500 leading-relaxed">Paste your text into the left box, select your preferred tone (Standard, Formal, or Creative), and click Paraphrase. The AI rewrites your text and displays it in the right box within seconds.</p>
+        </div>
+        <div className="bg-white border border-gray-100 rounded-xl p-5">
+          <h2 className="font-semibold text-gray-800 mb-2">Three Tone Options Explained</h2>
+          <p className="text-sm text-gray-500 leading-relaxed">Standard tone produces a natural rewrite suitable for most purposes. Formal tone uses professional, academic language ideal for business documents and reports. Creative tone uses more expressive, varied language suitable for marketing copy and creative writing.</p>
+        </div>
+        <div className="bg-white border border-gray-100 rounded-xl p-5">
+          <h2 className="font-semibold text-gray-800 mb-2">Who Uses Paraphrasing Tools?</h2>
+          <p className="text-sm text-gray-500 leading-relaxed">Students rewriting research notes in their own words. Content writers refreshing existing articles. Bloggers creating variations of social media posts. Non-native English speakers improving their writing. Marketers adapting copy for different audiences.</p>
+        </div>
+        <div className="bg-white border border-gray-100 rounded-xl p-5">
+          <h2 className="font-semibold text-gray-800 mb-2">Important Note on Academic Use</h2>
+          <p className="text-sm text-gray-500 leading-relaxed">While our paraphrasing tool is powered by advanced AI, we always recommend reviewing the output carefully and adding your own voice before submitting academic work. Always follow your institution's guidelines on AI tool usage.</p>
         </div>
       </div>
     </div>

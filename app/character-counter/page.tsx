@@ -60,6 +60,29 @@ export default function CharacterCounter() {
           ))}
         </div>
       </div>
+
+      <div className="mt-10 space-y-6">
+        <div className="bg-white border border-gray-100 rounded-xl p-5">
+          <h2 className="font-semibold text-gray-800 mb-2">What is a Character Counter?</h2>
+          <p className="text-sm text-gray-500 leading-relaxed">A character counter is a tool that counts every individual character in your text including letters, numbers, spaces, and punctuation marks. It is especially useful for platforms that enforce strict character limits.</p>
+        </div>
+        <div className="bg-white border border-gray-100 rounded-xl p-5">
+          <h2 className="font-semibold text-gray-800 mb-2">How to Use the Character Counter</h2>
+          <p className="text-sm text-gray-500 leading-relaxed">Paste or type your text into the box above. The tool instantly displays the total character count, characters without spaces, letters only, numbers only, and space count in real time.</p>
+        </div>
+        <div className="bg-white border border-gray-100 rounded-xl p-5">
+          <h2 className="font-semibold text-gray-800 mb-2">Who Uses a Character Counter?</h2>
+          <p className="text-sm text-gray-500 leading-relaxed">Social media managers counting Twitter and Instagram characters. Developers testing input field limits. SEO professionals crafting meta titles and descriptions. SMS marketers staying within 160 character message limits. App developers writing push notification copy.</p>
+        </div>
+        <div className="bg-white border border-gray-100 rounded-xl p-5">
+          <h2 className="font-semibold text-gray-800 mb-2">Character Limits on Popular Platforms</h2>
+          <p className="text-sm text-gray-500 leading-relaxed">Twitter/X: 280 characters per tweet. SMS: 160 characters per message. Meta description: 155-160 characters. Page title tag: 50-60 characters. Instagram caption: 2,200 characters. LinkedIn post: 3,000 characters. YouTube title: 100 characters.</p>
+        </div>
+        <div className="bg-white border border-gray-100 rounded-xl p-5">
+          <h2 className="font-semibold text-gray-800 mb-2">Benefits</h2>
+          <p className="text-sm text-gray-500 leading-relaxed">Our character counter shows five different metrics simultaneously, updates in real time, and works with text of any length without requiring an account or login.</p>
+        </div>
+      </div>
     </div>
   );
 }

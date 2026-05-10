@@ -23,7 +23,7 @@ const aiTools = [
   { name: "Paraphrasing Tool", slug: "paraphrasing-tool", icon: Wand2, description: "Rewrite your text in Standard, Formal or Creative tone." },
   { name: "Grammar Checker", slug: "grammar-checker", icon: CheckSquare, description: "Fix grammar errors and get a list of all corrections made." },
   { name: "Article Summarizer", slug: "article-summarizer", icon: Scissors, description: "Summarize long articles into short, medium or detailed form." },
-  { name: "Originality Checker", slug: "plagiarism-checker", icon: Shield, description: "Analyse your text for original expression and natural writing patterns." },
+  { name: "AI Content Checker", slug: "plagiarism-checker", icon: Shield, description: "Detect AI-generated content and check if text was written by ChatGPT or other AI tools." },
   { name: "Text Expander", slug: "text-expander", icon: Expand, description: "Expand short text into a fuller, enriched version." },
 ];
 

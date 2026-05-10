@@ -110,6 +110,29 @@ export default function LoremIpsumGenerator() {
           ))}
         </div>
       </div>
+
+      <div className="mt-10 space-y-6">
+        <div className="bg-white border border-gray-100 rounded-xl p-5">
+          <h2 className="font-semibold text-gray-800 mb-2">What is Lorem Ipsum?</h2>
+          <p className="text-sm text-gray-500 leading-relaxed">Lorem Ipsum is standard placeholder text used in design and publishing since the 1500s. It is derived from a Latin text by Cicero but deliberately scrambled so the reader focuses on the visual layout rather than the content.</p>
+        </div>
+        <div className="bg-white border border-gray-100 rounded-xl p-5">
+          <h2 className="font-semibold text-gray-800 mb-2">How to Use the Lorem Ipsum Generator</h2>
+          <p className="text-sm text-gray-500 leading-relaxed">Select how many paragraphs, sentences, or words you want to generate, then click Generate. The placeholder text appears instantly and can be copied to your clipboard with one click.</p>
+        </div>
+        <div className="bg-white border border-gray-100 rounded-xl p-5">
+          <h2 className="font-semibold text-gray-800 mb-2">Why Designers Use Lorem Ipsum</h2>
+          <p className="text-sm text-gray-500 leading-relaxed">When designing a website, app, or document, real content is often not available yet. Lorem Ipsum fills the space so designers and clients can evaluate the visual layout without being distracted by the actual words.</p>
+        </div>
+        <div className="bg-white border border-gray-100 rounded-xl p-5">
+          <h2 className="font-semibold text-gray-800 mb-2">Who Uses Lorem Ipsum?</h2>
+          <p className="text-sm text-gray-500 leading-relaxed">Web designers building page templates. App developers creating UI mockups. Graphic designers laying out print materials. WordPress theme developers. Presentation designers filling slide layouts.</p>
+        </div>
+        <div className="bg-white border border-gray-100 rounded-xl p-5">
+          <h2 className="font-semibold text-gray-800 mb-2">Lorem Ipsum Alternatives</h2>
+          <p className="text-sm text-gray-500 leading-relaxed">While Lorem Ipsum is the industry standard, some designers prefer language-specific placeholder text, or "blind text" in their target language, to better simulate how real content will look in their designs.</p>
+        </div>
+      </div>
     </div>
   );
 }

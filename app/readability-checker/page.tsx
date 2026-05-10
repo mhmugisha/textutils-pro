@@ -98,6 +98,29 @@ export default function ReadabilityChecker() {
           ))}
         </div>
       </div>
+
+      <div className="mt-10 space-y-6">
+        <div className="bg-white border border-gray-100 rounded-xl p-5">
+          <h2 className="font-semibold text-gray-800 mb-2">What is a Readability Checker?</h2>
+          <p className="text-sm text-gray-500 leading-relaxed">A readability checker analyses your text and gives it a score based on how easy it is to read and understand. Our tool uses the Flesch-Kincaid Reading Ease formula — the most widely used readability measurement in the world.</p>
+        </div>
+        <div className="bg-white border border-gray-100 rounded-xl p-5">
+          <h2 className="font-semibold text-gray-800 mb-2">How to Use the Readability Checker</h2>
+          <p className="text-sm text-gray-500 leading-relaxed">Paste your text into the box above. The tool instantly calculates your Flesch Reading Ease score, assigns a grade level, and tells you the average words per sentence. No button clicks required.</p>
+        </div>
+        <div className="bg-white border border-gray-100 rounded-xl p-5">
+          <h2 className="font-semibold text-gray-800 mb-2">Understanding the Flesch Reading Ease Score</h2>
+          <p className="text-sm text-gray-500 leading-relaxed">90-100: Very easy, suitable for 5th graders. 70-80: Easy, conversational English. 60-70: Standard, ideal for most web content. 50-60: Fairly difficult, suitable for high school students. 30-50: Difficult, college level. 0-30: Very difficult, professional or academic.</p>
+        </div>
+        <div className="bg-white border border-gray-100 rounded-xl p-5">
+          <h2 className="font-semibold text-gray-800 mb-2">Why Readability Matters for SEO</h2>
+          <p className="text-sm text-gray-500 leading-relaxed">Google favours content that is easy to read. Pages with better readability scores tend to have lower bounce rates, longer session times, and higher rankings. Most successful blog posts score between 60 and 70 on the Flesch scale.</p>
+        </div>
+        <div className="bg-white border border-gray-100 rounded-xl p-5">
+          <h2 className="font-semibold text-gray-800 mb-2">Who Uses Readability Checkers?</h2>
+          <p className="text-sm text-gray-500 leading-relaxed">Bloggers optimising content for Google. Teachers checking student writing complexity. Technical writers simplifying documentation. Marketing teams improving conversion copy. Authors targeting specific reading audiences.</p>
+        </div>
+      </div>
     </div>
   );
 }

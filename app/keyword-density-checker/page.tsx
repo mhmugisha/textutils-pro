@@ -105,6 +105,29 @@ export default function KeywordDensityChecker() {
           ))}
         </div>
       </div>
+
+      <div className="mt-10 space-y-6">
+        <div className="bg-white border border-gray-100 rounded-xl p-5">
+          <h2 className="font-semibold text-gray-800 mb-2">What is Keyword Density?</h2>
+          <p className="text-sm text-gray-500 leading-relaxed">Keyword density is the percentage of times a specific keyword or phrase appears in your content compared to the total word count. It is a fundamental SEO metric that helps search engines understand what your content is about.</p>
+        </div>
+        <div className="bg-white border border-gray-100 rounded-xl p-5">
+          <h2 className="font-semibold text-gray-800 mb-2">How to Use the Keyword Density Checker</h2>
+          <p className="text-sm text-gray-500 leading-relaxed">Paste your article or web page content into the box above. The tool automatically analyses every significant word, removes common stop words, and displays the top 20 keywords ranked by frequency with their density percentage and a visual bar.</p>
+        </div>
+        <div className="bg-white border border-gray-100 rounded-xl p-5">
+          <h2 className="font-semibold text-gray-800 mb-2">Ideal Keyword Density for SEO</h2>
+          <p className="text-sm text-gray-500 leading-relaxed">Most SEO experts recommend a keyword density of 1% to 2% for your primary keyword. Above 3% risks being penalised for keyword stuffing by Google. Secondary keywords should appear at 0.5% to 1%.</p>
+        </div>
+        <div className="bg-white border border-gray-100 rounded-xl p-5">
+          <h2 className="font-semibold text-gray-800 mb-2">Who Uses Keyword Density Checkers?</h2>
+          <p className="text-sm text-gray-500 leading-relaxed">SEO professionals optimising web pages. Bloggers ensuring content is topically focused. Content writers checking keyword distribution. Digital marketers reviewing competitor content. Website owners auditing existing pages.</p>
+        </div>
+        <div className="bg-white border border-gray-100 rounded-xl p-5">
+          <h2 className="font-semibold text-gray-800 mb-2">What are Stop Words?</h2>
+          <p className="text-sm text-gray-500 leading-relaxed">Stop words are common words like "the", "and", "is", "in", and "of" that are automatically excluded from keyword analysis because they carry no SEO value and would otherwise dominate the results.</p>
+        </div>
+      </div>
     </div>
   );
 }

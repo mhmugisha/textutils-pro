@@ -18,6 +18,12 @@ export default function Navbar() {
             className="text-blue-200 hover:text-white text-sm px-3 py-1.5 rounded-lg hover:bg-white/10 transition-colors">
             All Tools
           </Link>
+          <Link href="/about" className="text-blue-200 hover:text-white text-sm px-3 py-1.5 rounded-lg hover:bg-white/10 transition-colors">
+            About
+          </Link>
+          <Link href="/contact" className="text-blue-200 hover:text-white text-sm px-3 py-1.5 rounded-lg hover:bg-white/10 transition-colors">
+            Contact
+          </Link>
         </div>
       </div>
       <div className="ml-auto flex items-center gap-4">

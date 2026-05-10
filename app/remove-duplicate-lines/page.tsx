@@ -82,6 +82,29 @@ export default function RemoveDuplicateLines() {
           ))}
         </div>
       </div>
+
+      <div className="mt-10 space-y-6">
+        <div className="bg-white border border-gray-100 rounded-xl p-5">
+          <h2 className="font-semibold text-gray-800 mb-2">What is a Duplicate Line Remover?</h2>
+          <p className="text-sm text-gray-500 leading-relaxed">A duplicate line remover is a text cleaning tool that scans your list or document and removes any lines that appear more than once, keeping only the first occurrence of each unique line.</p>
+        </div>
+        <div className="bg-white border border-gray-100 rounded-xl p-5">
+          <h2 className="font-semibold text-gray-800 mb-2">How to Use the Duplicate Line Remover</h2>
+          <p className="text-sm text-gray-500 leading-relaxed">Paste your list or text into the left box and click Remove Duplicates. The tool instantly shows the cleaned list in the right box and tells you exactly how many duplicate lines were removed.</p>
+        </div>
+        <div className="bg-white border border-gray-100 rounded-xl p-5">
+          <h2 className="font-semibold text-gray-800 mb-2">Common Use Cases</h2>
+          <p className="text-sm text-gray-500 leading-relaxed">Cleaning email lists before a campaign. Removing duplicate keywords from an SEO list. Cleaning up exported database entries. Deduplicating product lists. Removing repeated lines from log files. Cleaning scraped data.</p>
+        </div>
+        <div className="bg-white border border-gray-100 rounded-xl p-5">
+          <h2 className="font-semibold text-gray-800 mb-2">Who Uses This Tool?</h2>
+          <p className="text-sm text-gray-500 leading-relaxed">Digital marketers cleaning mailing lists. Data analysts processing exported data. Developers cleaning log files. SEO professionals deduplicating keyword lists. Virtual assistants cleaning client spreadsheets.</p>
+        </div>
+        <div className="bg-white border border-gray-100 rounded-xl p-5">
+          <h2 className="font-semibold text-gray-800 mb-2">Benefits</h2>
+          <p className="text-sm text-gray-500 leading-relaxed">Processes lists of any size instantly, preserves the original order of lines, shows a count of removed duplicates, and requires no login or account.</p>
+        </div>
+      </div>
     </div>
   );
 }
