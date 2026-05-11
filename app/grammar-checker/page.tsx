@@ -81,7 +81,7 @@ export default function GrammarChecker() {
         <button
           onClick={checkGrammar}
           disabled={!text.trim() || loading}
-          className="px-5 py-2 bg-purple-600 text-white rounded-lg text-sm font-medium hover:bg-purple-700 disabled:opacity-40 transition-colors"
+          className="w-full sm:w-auto px-5 py-2 bg-purple-600 text-white rounded-lg text-sm font-medium hover:bg-purple-700 disabled:opacity-40 transition-colors"
         >
           {loading ? "Checking..." : "Check Grammar"}
         </button>

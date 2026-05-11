@@ -5,7 +5,7 @@ export const metadata = {
 
 export default function Contact() {
   return (
-    <div className="py-6 max-w-2xl">
+    <div className="py-6 max-w-none lg:max-w-2xl">
       <h1 className="text-3xl font-bold text-gray-900 mb-2">Contact Us</h1>
       <p className="text-sm text-gray-400 mb-8">We would love to hear from you</p>
       <div className="space-y-6 text-gray-600 leading-relaxed">

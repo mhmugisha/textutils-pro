@@ -74,7 +74,7 @@ export default function LoremIpsumGenerator() {
           </div>
           <button
             onClick={generate}
-            className="px-5 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors"
+            className="w-full sm:w-auto px-5 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors"
           >
             Generate
           </button>

@@ -16,7 +16,7 @@ export default function WordCounter() {
       <h1 className="text-2xl font-bold text-gray-900 mb-2">Word Counter</h1>
       <p className="text-gray-500 mb-6">Count words, characters, sentences, paragraphs and reading time instantly. Free, no login required.</p>
 
-      <div className="grid grid-cols-3 sm:grid-cols-6 gap-3 mb-6">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 mb-6">
         {[
           { label: "Words", value: words },
           { label: "Characters", value: characters },

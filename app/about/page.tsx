@@ -5,7 +5,7 @@ export const metadata = {
 
 export default function About() {
   return (
-    <div className="py-6 max-w-3xl">
+    <div className="py-6 max-w-none lg:max-w-3xl">
       <h1 className="text-3xl font-bold text-gray-900 mb-2">About TextToolsMax</h1>
       <p className="text-sm text-gray-400 mb-8">Free Online Text Tools for Everyone</p>
 

@@ -15,7 +15,7 @@ export default function CharacterCounter() {
       <h1 className="text-2xl font-bold text-gray-900 mb-2">Character Counter</h1>
       <p className="text-gray-500 mb-6">Count characters, letters, numbers and spaces instantly. Free, no login required.</p>
 
-      <div className="grid grid-cols-3 sm:grid-cols-5 gap-3 mb-6">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 mb-6">
         {[
           { label: "Characters", value: characters },
           { label: "No Spaces", value: noSpaces },

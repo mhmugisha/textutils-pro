@@ -64,17 +64,17 @@ export default function Home() {
   return (
     <div className="py-2">
       {/* Hero */}
-      <div className="relative mb-6 p-8 rounded-3xl overflow-hidden w-full"
+      <div className="relative mb-6 p-5 lg:p-8 rounded-3xl overflow-hidden w-full"
         style={{ background: "linear-gradient(135deg, #1e3a5f 0%, #2563eb 60%, #7c3aed 100%)" }}>
         <div className="relative z-10">
           <div className="inline-flex items-center gap-2 bg-white/20 text-white text-xs px-3 py-1.5 rounded-full mb-4 border border-white/30">
             <span className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse" />
             15 Tools Available — Free Forever
           </div>
-          <h1 className="text-3xl font-bold text-white mb-3 leading-tight">
+          <h1 className="text-2xl lg:text-3xl font-bold text-white mb-3 leading-tight">
             Free Online Text Tools
           </h1>
-          <p className="text-blue-100 text-base mb-4 max-w-2xl">
+          <p className="text-blue-100 text-sm lg:text-base mb-4 max-w-2xl">
             Fast, free, no login required. Powerful text utilities for writers, students, developers and marketers.
           </p>
           <div className="flex flex-wrap gap-2">
@@ -101,7 +101,7 @@ export default function Home() {
           <h2 className="text-base font-bold text-gray-800">Text Tools</h2>
           <span className="text-xs bg-blue-50 text-blue-600 px-2 py-0.5 rounded-full font-medium">10 tools</span>
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-3">
           {freeTools.map((tool) => (
             <ToolCard key={tool.slug} {...tool} />
           ))}
@@ -115,7 +115,7 @@ export default function Home() {
           <h2 className="text-base font-bold text-gray-800">AI-Powered Tools</h2>
           <span className="text-xs bg-purple-50 text-purple-600 px-2 py-0.5 rounded-full font-medium">5 tools</span>
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-3">
           {aiTools.map((tool) => (
             <ToolCard key={tool.slug} {...tool} ai />
           ))}

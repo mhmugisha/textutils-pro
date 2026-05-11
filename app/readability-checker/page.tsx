@@ -52,7 +52,7 @@ export default function ReadabilityChecker() {
       />
 
       {text.trim() && sentences > 0 && (
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
           <div className={`${readability.bg} border border-gray-200 rounded-xl p-5 text-center`}>
             <div className={`text-4xl font-bold ${readability.color}`}>{clampedScore}</div>
             <div className="text-sm text-gray-500 mt-1">Flesch Score</div>

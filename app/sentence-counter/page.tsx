@@ -15,7 +15,7 @@ export default function SentenceCounter() {
       <h1 className="text-2xl font-bold text-gray-900 mb-2">Sentence Counter</h1>
       <p className="text-gray-500 mb-6">Count sentences, paragraphs and get average sentence length instantly.</p>
 
-      <div className="grid grid-cols-3 sm:grid-cols-5 gap-3 mb-6">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 mb-6">
         {[
           { label: "Sentences", value: sentences },
           { label: "Words", value: words },
