@@ -3,7 +3,7 @@ import {
   Type, Hash, AlignLeft, Trash2, List,
   BookOpen, Search, FileText, RotateCcw,
   ArrowUpDown, Wand2, CheckSquare, Scissors,
-  Shield, Expand
+  Shield, Expand, Video
 } from "lucide-react";
 
 const freeTools = [
@@ -25,6 +25,7 @@ const aiTools = [
   { name: "Article Summarizer", slug: "article-summarizer", icon: Scissors, description: "Summarize long articles into short, medium or detailed form." },
   { name: "AI Content Checker", slug: "plagiarism-checker", icon: Shield, description: "Detect AI-generated content and check if text was written by ChatGPT or other AI tools." },
   { name: "Text Expander", slug: "text-expander", icon: Expand, description: "Expand short text into a fuller, enriched version." },
+  { name: "YouTube Transcript", slug: "youtube-transcript", icon: Video, description: "Convert any YouTube video to text instantly. Free, no login required." },
 ];
 
 function ToolCard({ name, slug, icon: Icon, description, ai = false }: {
@@ -69,7 +70,7 @@ export default function Home() {
         <div className="relative z-10">
           <div className="inline-flex items-center gap-2 bg-white/20 text-white text-xs px-3 py-1.5 rounded-full mb-4 border border-white/30">
             <span className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse" />
-            15 Tools Available — Free Forever
+            16 Tools Available — Free Forever
           </div>
           <h1 className="text-2xl lg:text-3xl font-bold text-white mb-3 leading-tight">
             Free Online Text Tools
@@ -113,7 +114,7 @@ export default function Home() {
         <div className="flex items-center gap-3 mb-4">
           <div className="h-5 w-1 bg-purple-500 rounded-full" />
           <h2 className="text-base font-bold text-gray-800">AI-Powered Tools</h2>
-          <span className="text-xs bg-purple-50 text-purple-600 px-2 py-0.5 rounded-full font-medium">5 tools</span>
+          <span className="text-xs bg-purple-50 text-purple-600 px-2 py-0.5 rounded-full font-medium">6 tools</span>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-3">
           {aiTools.map((tool) => (

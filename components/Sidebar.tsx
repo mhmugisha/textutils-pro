@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { X } from "lucide-react";
+import { X, Video } from "lucide-react";
 import {
   Type, Hash, AlignLeft, Trash2, List,
   BookOpen, Search, FileText, RotateCcw,
@@ -28,6 +28,7 @@ const tools = [
     { name: "Article Summarizer", slug: "article-summarizer", icon: Scissors },
     { name: "AI Content Checker", slug: "plagiarism-checker", icon: Shield },
     { name: "Text Expander", slug: "text-expander", icon: Expand },
+    { name: "YouTube Transcript", slug: "youtube-transcript", icon: Video },
   ]},
 ];
 
@@ -135,7 +136,7 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen }: SidebarProps) {
 
         <div className="mx-4 mb-4 p-3 bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl border border-blue-100">
           <p className="text-xs font-semibold text-gray-700 mb-1">✨ AI-Powered Tools</p>
-          <p className="text-xs text-gray-500">5 tools powered by Claude AI for smarter text processing.</p>
+          <p className="text-xs text-gray-500">6 tools powered by Claude AI for smarter text processing.</p>
         </div>
       </aside>
     </>

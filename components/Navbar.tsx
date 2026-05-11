@@ -34,7 +34,7 @@ export default function Navbar({ sidebarOpen, setSidebarOpen }: NavbarProps) {
         </div>
       </div>
       <div className="ml-auto flex items-center gap-4">
-        <span className="text-blue-200 text-sm hidden lg:block">15 Free Text Tools</span>
+        <span className="text-blue-200 text-sm hidden lg:block">16 Free Text Tools</span>
         <div className="bg-white/20 text-white text-xs px-3 py-1.5 rounded-full border border-white/30 hidden lg:block">
           No Login Required
         </div>

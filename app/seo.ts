@@ -59,4 +59,8 @@ export const seoData: Record<string, { title: string; description: string }> = {
     title: "Text Expander — Free AI Text Expansion Tool | TextUtils Pro",
     description: "Expand short text into a fuller, more detailed version using AI. Free online text expander, no login required.",
   },
+  "youtube-transcript": {
+    title: "YouTube Transcript Generator — Free Video to Text Tool | TextToolsMax",
+    description: "Convert any YouTube video to text instantly. Free online YouTube transcript generator, supports videos up to 1 hour. No login required.",
+  },
 };
