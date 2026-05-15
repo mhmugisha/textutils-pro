@@ -12,11 +12,11 @@ function getRequestIp(req: NextRequest) {
 function isAllowed(ip: string) {
   const now = Date.now();
   const resetTime = RATE_LIMIT.get(ip) ?? 0;
-  if (now < resetTime) {
-    return false;
-  }
-  RATE_LIMIT.set(ip, now + 60 * 60 * 1000);
-  return true;
+  return now >= resetTime;
+}
+
+function markSuccess(ip: string) {
+  RATE_LIMIT.set(ip, Date.now() + 60 * 60 * 1000);
 }
 
 const YOUTUBE_ID_REGEX = /(?:youtu\.be\/|youtube(?:-nocookie)?\.com\/(?:watch\?v=|embed\/|shorts\/))([A-Za-z0-9_-]{11})/;
@@ -55,13 +55,6 @@ export async function POST(req: NextRequest) {
 
   if (!videoUrl) {
     return NextResponse.json({ error: "Please provide a valid YouTube URL." }, { status: 400 });
-  }
-
-  if (!isAllowed(ip)) {
-    return NextResponse.json(
-      { error: "You have reached the free limit of 1 transcription per hour. Please try again in an hour." },
-      { status: 429 }
-    );
   }
 
   const videoId = extractVideoId(videoUrl);
@@ -109,6 +102,13 @@ export async function POST(req: NextRequest) {
     );
   }
 
+  if (!isAllowed(ip)) {
+    return NextResponse.json(
+      { error: "You have reached the free limit of 1 transcription per hour. Please try again in an hour." },
+      { status: 429 }
+    );
+  }
+
   const rawTranscript = rawTranscriptItems
     .map((item: any) => String(item.text || "").trim())
     .filter(Boolean)
@@ -147,6 +147,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Something went wrong. Please try again." }, { status: 500 });
     }
 
+    markSuccess(ip);
     const wordCount = transcript.split(/\s+/).filter(Boolean).length;
 
     return NextResponse.json({ transcript, wordCount, duration: durationSeconds });
